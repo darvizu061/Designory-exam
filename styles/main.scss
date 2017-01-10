@@ -1,0 +1,374 @@
+// Stylesheet for index.html
+
+/*************************
+SCSS VARIABLES: MEDIA QUERIES
+*************************/
+$large: "1200px";
+$medium: "992px";
+$small: "768px";
+$xsmall: "480px";
+/* Custom, iPhone Retina */
+$xxsmall: "320px";
+/*************************
+NORMALIZE SCSS
+*************************/
+html,body{
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+/*************************
+THEME CLASSES: CONTAINERS 
+*************************/
+.partial-full{
+  width: 100vw;
+  position: relative;
+}
+.partial-half{
+  width: 41%;
+  padding: 0 4%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.partial-3-set{
+  font-family: 'Roboto', sans-serif;
+  width: 92%;
+  position: relative;
+  margin: 0 auto;
+  top: -150px;
+  right: 0;
+  left: 0;
+  .sub-partial{
+    background-color: white;
+    height: 420px;
+    width: 30%;
+    margin-right: 4.4%;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    &:last-child{
+      margin-right: 0;
+    }
+    img{
+      width: 95%;
+      display: block;
+      padding-top: 10px;
+      margin: 0 auto 20px;
+    }
+    h1, h3, h4{
+      margin: 0;
+      padding-left: 2.5%;
+      padding-right: 10%;
+      text-align: justify;
+    }
+    h3{
+      margin-bottom: 25px;
+      font-weight: lighter;
+    }
+  }
+  @media screen and (max-width: $small){
+    .sub-partial, .sub-partial:last-child{
+      width: 95%;
+      display: block;
+      margin: 0 auto 20px;
+      padding-bottom: 30px;
+      height: auto;
+      h1,h2,h3,h4{
+        line-height: 40px;
+      }
+    }
+  }
+}
+.float-right{
+  float: right;
+}
+.float-left{
+  float: left;
+}
+.thick-border{
+  border: 2px #d1d1d1 double;
+  padding: 20px;
+}
+/*************************
+THEME CLASSES: BUTTONS 
+*************************/
+.btn-lg-general{
+  margin: 17px 0;
+  padding: 15px 50px 5px;
+  font-size: 18px;
+  height: 30px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 5px;
+  width: auto;
+}
+/*************************
+THEME CLASSES: FONTS 
+*************************/
+.thin{
+  font-weight: 300;
+}
+/*************************
+Site Specific SCSS
+*************************/
+nav{
+  width: 100vw;
+  height: 120px;
+  padding: 0 5%;
+  background-color: white;
+  border-bottom: 3px black solid;
+  #siteTitle{
+    padding-top: 35px;
+  }
+  ul{
+    margin: 0;
+    padding: 50px 50px 0 0;
+    list-style-type: none;
+    font-family: 'Arimo', sans-serif;
+    vertical-align: top;
+    li{
+      display: inline;
+      margin-right: 60px;
+      font-size: 17px;
+      a{
+        color: #808080;
+        text-decoration: none;
+      }
+    }
+    li.mobile-menu-icon{
+      display: none;
+    }
+  }
+  @media screen and (max-width: $large){
+    ul li{
+      margin-right: 40px;
+    }
+  }
+  @media screen and (max-width: $medium){
+    #siteTitle{
+      padding-top: 40px;
+      width: 200px;
+    }
+    ul li{
+      margin-right: 20px;
+      font-size: 13px;
+    }
+  }
+  @media screen and (max-width: $small){
+    height: 80px;
+    #siteTitle{
+      padding-top: 22px;
+    }
+    ul{
+      padding-top: 30px;
+      li{
+        display: none;
+        &.mobile-menu-icon{
+          display: block;
+        }
+      }
+    }
+    .responsive {
+      position: absolute;
+      right: -5%;
+      z-index: 2;
+      background-color: white;
+      width: 200px;
+      padding-left: 20px;
+      li.mobile-menu-icon{
+        position: absolute;
+        top: 30px;
+        right: 50px;
+      }
+      li{
+        float: none;
+        display: inline;
+      }
+      li a{
+        display: block;
+      }
+      li:nth-child(2){
+        a{
+          padding-top: 40px;
+        }
+      }
+    }
+    
+  }
+  @media screen and (max-width: $xsmall){
+    #siteTitle{
+      width: 120px;
+      padding-top: 30px;
+    }
+    .responsive{
+      width: 150px;
+    }
+  }
+  @media screen and (max-width: $xxsmall){
+    .responsive{
+      width: 120px;
+    }
+  }
+}
+#partial1{
+  height: 70vh;
+  min-height: 560px;
+  background-color: #ebebeb;
+  padding: 110px 12% 0;
+  font-family: 'Arimo', sans-serif;
+  border-bottom: 2px solid #b5b5b5; 
+  #jumbotron-content{
+    h3, h1{
+      margin: 0;
+    }
+    h3{
+      font-size: 33px;
+    }
+    h1{
+      font-size: 65px;
+    }
+  }
+  @media screen and (max-width: $large){
+    padding: 110px 8% 0;
+  }
+  @media screen and (max-width: $medium){
+    padding: 110px 7% 0;
+    #jumbotron-content{
+      h3{
+        font-size: 22px;
+      }
+      h1{
+        font-size: 55px;
+      }
+    }
+  }
+  @media screen and (max-width: $small){
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    #jumbotron-content{
+      margin: 0 auto;
+      h3{
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      h1{
+        font-size: 45px;
+      }
+    }
+  }
+  @media screen and (max-width: $xsmall){
+    #jumbotron-content{
+      h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+#partial2{
+  // no specifc scss
+}
+#partial3{
+  font-family: 'Arimo', sans-serif;
+  height: 540px;
+  padding-bottom: 100px;
+  #img-container{
+    img{
+      width: 95%;
+      height: 95%;
+    }
+  }
+  #content{
+    h1{
+      font-size: 40px;
+      margin: 0;
+    }
+    h2{
+      font-size: 28px;
+      margin-top: 5px;
+    }
+    p{
+      font-weight: 500;
+      font-size: 20px;
+      padding-right: 100px;
+      text-align: justify;
+      margin-bottom: 140px;
+      line-height: 25px;
+    }
+  }
+  @media screen and (max-width: $large){
+    #content{
+      h1{
+        font-size: 34px;
+      }
+      h2{
+        font-size: 22px;
+      }
+      p{
+        font-size: 16px;
+        margin-bottom: 110px;
+        padding-right: 80px;
+      }
+    }
+    
+  }
+  @media screen and (max-width: $medium){
+    height: auto;
+    #img-container{
+      width: 100vw;
+      padding: 0;
+      display: block;
+      img{
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: 400px;
+      }
+    }
+    #content{
+      width: 100vw;
+      padding-top: 50px;
+      display: block;
+    }
+    
+  }
+  @media screen and (max-width: $small){
+    #img-container{
+      img{
+        width: 82%;
+        height: 400px;
+      }
+    }
+    #content{
+      padding: 50px 4%;
+      width: auto;
+    }
+    
+    
+  }
+}
+footer{
+  font-family: 'Roboto', sans-serif;
+  height: 90px;
+  padding: 0 4%;
+  #content{
+    border-top: 3px black solid;
+  }
+  @media screen and (max-width: $small){
+    h4{
+      font-size: 10px;
+    }
+  }
+}

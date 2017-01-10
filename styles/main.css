@@ -1,0 +1,284 @@
+/*************************
+SCSS VARIABLES: MEDIA QUERIES
+*************************/
+/* Custom, iPhone Retina */
+/*************************
+NORMALIZE SCSS
+*************************/
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden; }
+
+/*************************
+THEME CLASSES: CONTAINERS 
+*************************/
+.partial-full {
+  width: 100vw;
+  position: relative; }
+
+.partial-half {
+  width: 41%;
+  padding: 0 4%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top; }
+
+.partial-3-set {
+  font-family: 'Roboto', sans-serif;
+  width: 92%;
+  position: relative;
+  margin: 0 auto;
+  top: -150px;
+  right: 0;
+  left: 0; }
+  .partial-3-set .sub-partial {
+    background-color: white;
+    height: 420px;
+    width: 30%;
+    margin-right: 4.4%;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75); }
+    .partial-3-set .sub-partial:last-child {
+      margin-right: 0; }
+    .partial-3-set .sub-partial img {
+      width: 95%;
+      display: block;
+      padding-top: 10px;
+      margin: 0 auto 20px; }
+    .partial-3-set .sub-partial h1, .partial-3-set .sub-partial h3, .partial-3-set .sub-partial h4 {
+      margin: 0;
+      padding-left: 2.5%;
+      padding-right: 10%;
+      text-align: justify; }
+    .partial-3-set .sub-partial h3 {
+      margin-bottom: 25px;
+      font-weight: lighter; }
+  @media screen and (max-width: 768px) {
+    .partial-3-set .sub-partial, .partial-3-set .sub-partial:last-child {
+      width: 95%;
+      display: block;
+      margin: 0 auto 20px;
+      padding-bottom: 30px;
+      height: auto; }
+      .partial-3-set .sub-partial h1, .partial-3-set .sub-partial h2, .partial-3-set .sub-partial h3, .partial-3-set .sub-partial h4, .partial-3-set .sub-partial:last-child h1, .partial-3-set .sub-partial:last-child h2, .partial-3-set .sub-partial:last-child h3, .partial-3-set .sub-partial:last-child h4 {
+        line-height: 40px; } }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.thick-border {
+  border: 2px #d1d1d1 double;
+  padding: 20px; }
+
+/*************************
+THEME CLASSES: BUTTONS 
+*************************/
+.btn-lg-general {
+  margin: 17px 0;
+  padding: 15px 50px 5px;
+  font-size: 18px;
+  height: 30px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 5px;
+  width: auto; }
+
+/*************************
+THEME CLASSES: FONTS 
+*************************/
+.thin {
+  font-weight: 300; }
+
+/*************************
+Site Specific SCSS
+*************************/
+nav {
+  width: 100vw;
+  height: 120px;
+  padding: 0 5%;
+  background-color: white;
+  border-bottom: 3px black solid; }
+  nav #siteTitle {
+    padding-top: 35px; }
+  nav ul {
+    margin: 0;
+    padding: 50px 50px 0 0;
+    list-style-type: none;
+    font-family: 'Arimo', sans-serif;
+    vertical-align: top; }
+    nav ul li {
+      display: inline;
+      margin-right: 60px;
+      font-size: 17px; }
+      nav ul li a {
+        color: #808080;
+        text-decoration: none; }
+    nav ul li.mobile-menu-icon {
+      display: none; }
+  @media screen and (max-width: 1200px) {
+    nav ul li {
+      margin-right: 40px; } }
+  @media screen and (max-width: 992px) {
+    nav #siteTitle {
+      padding-top: 40px;
+      width: 200px; }
+    nav ul li {
+      margin-right: 20px;
+      font-size: 13px; } }
+  @media screen and (max-width: 768px) {
+    nav {
+      height: 80px; }
+      nav #siteTitle {
+        padding-top: 22px; }
+      nav ul {
+        padding-top: 30px; }
+        nav ul li {
+          display: none; }
+          nav ul li.mobile-menu-icon {
+            display: block; }
+      nav .responsive {
+        position: absolute;
+        right: -5%;
+        z-index: 2;
+        background-color: white;
+        width: 200px;
+        padding-left: 20px; }
+        nav .responsive li.mobile-menu-icon {
+          position: absolute;
+          top: 30px;
+          right: 50px; }
+        nav .responsive li {
+          float: none;
+          display: inline; }
+        nav .responsive li a {
+          display: block; }
+        nav .responsive li:nth-child(2) a {
+          padding-top: 40px; } }
+  @media screen and (max-width: 480px) {
+    nav #siteTitle {
+      width: 120px;
+      padding-top: 30px; }
+    nav .responsive {
+      width: 150px; } }
+  @media screen and (max-width: 320px) {
+    nav .responsive {
+      width: 120px; } }
+
+#partial1 {
+  height: 70vh;
+  min-height: 560px;
+  background-color: #ebebeb;
+  padding: 110px 12% 0;
+  font-family: 'Arimo', sans-serif;
+  border-bottom: 2px solid #b5b5b5; }
+  #partial1 #jumbotron-content h3, #partial1 #jumbotron-content h1 {
+    margin: 0; }
+  #partial1 #jumbotron-content h3 {
+    font-size: 33px; }
+  #partial1 #jumbotron-content h1 {
+    font-size: 65px; }
+  @media screen and (max-width: 1200px) {
+    #partial1 {
+      padding: 110px 8% 0; } }
+  @media screen and (max-width: 992px) {
+    #partial1 {
+      padding: 110px 7% 0; }
+      #partial1 #jumbotron-content h3 {
+        font-size: 22px; }
+      #partial1 #jumbotron-content h1 {
+        font-size: 55px; } }
+  @media screen and (max-width: 768px) {
+    #partial1 {
+      padding-right: 0;
+      padding-left: 0;
+      text-align: center; }
+      #partial1 #jumbotron-content {
+        margin: 0 auto; }
+        #partial1 #jumbotron-content h3 {
+          font-size: 18px;
+          margin-bottom: 8px; }
+        #partial1 #jumbotron-content h1 {
+          font-size: 45px; } }
+  @media screen and (max-width: 480px) {
+    #partial1 #jumbotron-content h3 {
+      font-size: 14px;
+      margin-bottom: 10px; }
+    #partial1 #jumbotron-content h1 {
+      font-size: 30px;
+      margin-bottom: 10px; } }
+
+#partial3 {
+  font-family: 'Arimo', sans-serif;
+  height: 540px;
+  padding-bottom: 100px; }
+  #partial3 #img-container img {
+    width: 95%;
+    height: 95%; }
+  #partial3 #content h1 {
+    font-size: 40px;
+    margin: 0; }
+  #partial3 #content h2 {
+    font-size: 28px;
+    margin-top: 5px; }
+  #partial3 #content p {
+    font-weight: 500;
+    font-size: 20px;
+    padding-right: 100px;
+    text-align: justify;
+    margin-bottom: 140px;
+    line-height: 25px; }
+  @media screen and (max-width: 1200px) {
+    #partial3 #content h1 {
+      font-size: 34px; }
+    #partial3 #content h2 {
+      font-size: 22px; }
+    #partial3 #content p {
+      font-size: 16px;
+      margin-bottom: 110px;
+      padding-right: 80px; } }
+  @media screen and (max-width: 992px) {
+    #partial3 {
+      height: auto; }
+      #partial3 #img-container {
+        width: 100vw;
+        padding: 0;
+        display: block; }
+        #partial3 #img-container img {
+          display: block;
+          margin: 0 auto;
+          width: 500px;
+          height: 400px; }
+      #partial3 #content {
+        width: 100vw;
+        padding-top: 50px;
+        display: block; } }
+  @media screen and (max-width: 768px) {
+    #partial3 #img-container img {
+      width: 82%;
+      height: 400px; }
+    #partial3 #content {
+      padding: 50px 4%;
+      width: auto; } }
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  height: 90px;
+  padding: 0 4%; }
+  footer #content {
+    border-top: 3px black solid; }
+  @media screen and (max-width: 768px) {
+    footer h4 {
+      font-size: 10px; } }
+
+/*# sourceMappingURL=main.css.map */
